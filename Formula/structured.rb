@@ -3,7 +3,7 @@ class Structured < Formula
   homepage "https://structured.app"
   url "ssh://git@github.com/unorderly/structured-cli.git",
       tag:      "v0.1.0",
-      revision: "5a1712a201fdbd76220179486f08637ebd0040b5"
+      revision: "0fe5dc4cae2c8ea941ce64a42967dff1371962f8"
   license :cannot_represent
 
   head "ssh://git@github.com/unorderly/structured-cli.git", branch: "main"
