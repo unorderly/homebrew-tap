@@ -2,8 +2,8 @@ class Structured < Formula
   desc "CLI for Structured, the daily planner"
   homepage "https://structured.app"
   url "ssh://git@github.com/unorderly/structured-cli.git",
-      tag:      "v0.1.0",
-      revision: "0fe5dc4cae2c8ea941ce64a42967dff1371962f8"
+      tag:      "v0.1.1",
+      revision: "8d0b52d250ec1106c8c85bdd16dca25a6349687d"
   license :cannot_represent
 
   head "ssh://git@github.com/unorderly/structured-cli.git", branch: "main"
