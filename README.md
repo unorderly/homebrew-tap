@@ -24,11 +24,11 @@ The formula currently builds from the private source repository over SSH:
 ssh://git@github.com/unorderly/structured-cli.git
 ```
 
-So installers need GitHub/SSH access to `unorderly/structured-cli`. The stable formula points at tag `v0.1.0`; make sure that tag is pushed before sharing the tap:
+So installers need GitHub/SSH access to `unorderly/structured-cli`. The stable formula points at tag `v0.1.2`; make sure that tag is pushed before sharing the tap:
 
 ```bash
 cd ../structured-cli
-git push origin v0.1.0
+git push origin v0.1.2
 ```
 
 To install from the latest `main` instead of the stable tag:
