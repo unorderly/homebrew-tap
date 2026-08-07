@@ -1,7 +1,7 @@
 class Structured < Formula
   desc "CLI for Structured, the daily planner"
   homepage "https://structured.app"
-  version "0.1.2"
+  version "0.2.0"
   license :cannot_represent
 
   # Building from source needs SSH access to the private repository.
@@ -14,23 +14,23 @@ class Structured < Formula
   # does not require access to the private structured-cli source repository.
   on_macos do
     on_arm do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.1.2/structured-darwin-arm64"
-      sha256 "58dc873f42fee9f5da391d007813b887def4a9c982b778d0439f1d7e01c2c1eb"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.2.0/structured-darwin-arm64"
+      sha256 "6e225826f36b3ce77208aa35f29a5fd5e65258bd2467b4e458708b58dbd5570d"
     end
     on_intel do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.1.2/structured-darwin-x64"
-      sha256 "a01a6bef91ae265096cf36e274930cc9b862e27ecb310dfafadb899c70310bdd"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.2.0/structured-darwin-x64"
+      sha256 "7ad0359583d185792b6e87636b0e1a1877280063a6c93cf9bdbf4400c73b26ef"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.1.2/structured-linux-arm64"
-      sha256 "975ce0e2f57af33955499ac8abb37a5343ac2d867c3b5324fbbb4e234c81e672"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.2.0/structured-linux-arm64"
+      sha256 "30220f7322edf1fc263e7d94f8330d28713b4960bbab9e55badc36a268b3f242"
     end
     on_intel do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.1.2/structured-linux-x64"
-      sha256 "1005a87ba6d8c680cdf2c747de82b068dc174ea314f13fbb1ed196c5c796efe3"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.2.0/structured-linux-x64"
+      sha256 "e780c5935d7eaecd31883e406aab762b3f6372ec578f1523142c0c625c1ed346"
     end
   end
 
