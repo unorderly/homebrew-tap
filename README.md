@@ -16,40 +16,28 @@ structured today
 strct today
 ```
 
-## Current source setup
+## How distribution works
 
-The formula currently builds from the private source repository over SSH:
+The CLI source lives in the private `unorderly/structured-cli` repository, but nobody needs
+access to it in order to install:
 
-```text
-ssh://git@github.com/unorderly/structured-cli.git
-```
+- `brew install structured` downloads a prebuilt binary from this tap's own releases. This
+  repository is public, so the download needs no authentication.
+- `brew install --HEAD structured` builds from `main` with Go over SSH. This requires access
+  to `unorderly/structured-cli`.
 
-So installers need GitHub/SSH access to `unorderly/structured-cli`. The stable formula points at tag `v0.1.2`; make sure that tag is pushed before sharing the tap:
+Binaries are built for macOS (arm64, x86-64) and Linux (arm64, x86-64).
 
-```bash
-cd ../structured-cli
-git push origin v0.1.2
-```
+## Releasing a new version
 
-To install from the latest `main` instead of the stable tag:
+Releases are automated. Pushing a `v*` tag in `structured-cli` runs its `Release` workflow,
+which cross-compiles every target, publishes the binaries to a `structured-v*` release in
+this repository, and commits the updated `version` and `sha256` values into
+`Formula/structured.rb`.
 
-```bash
-brew install --HEAD structured
-```
+That workflow needs a `TAP_GITHUB_TOKEN` secret in `structured-cli`: a fine-grained personal
+access token (or GitHub App installation token) scoped to `unorderly/homebrew-tap` with
+**Contents: read and write**.
 
-## Publishing this tap
-
-After creating `github.com/unorderly/homebrew-tap`:
-
-```bash
-git remote add origin git@github.com:unorderly/homebrew-tap.git
-git push -u origin main
-```
-
-Because the repo name is `homebrew-tap`, users tap it as `unorderly/tap`.
-
-## Updating for a new release
-
-1. Tag and push a release in `structured-cli`.
-2. Update `Formula/structured.rb` with the new tag and commit revision.
-3. Commit and push this tap.
+Release assets are attached to releases rather than committed, so this repository stays small
+even though every user clones it when they tap.
