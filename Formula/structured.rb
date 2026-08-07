@@ -37,7 +37,8 @@ class Structured < Formula
   def install
     if build.head?
       ENV["CGO_ENABLED"] = "0"
-      system "go", "build", "-trimpath", "-ldflags=-s -w", "-o", bin/"structured", "./cmd/structured"
+      ldflags = "-s -w -X github.com/unorderly/structured-cli/internal/cli.version=#{version}"
+      system "go", "build", "-trimpath", "-ldflags=#{ldflags}", "-o", bin/"structured", "./cmd/structured"
     else
       bin.install Dir["structured-*"].first => "structured"
     end
