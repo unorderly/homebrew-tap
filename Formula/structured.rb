@@ -1,7 +1,7 @@
 class Structured < Formula
   desc "CLI for Structured, the daily planner"
   homepage "https://structured.app"
-  version "0.3.0"
+  version "0.4.0"
   license :cannot_represent
 
   # Building from source needs SSH access to the private repository.
@@ -14,23 +14,23 @@ class Structured < Formula
   # does not require access to the private structured-cli source repository.
   on_macos do
     on_arm do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.3.0/structured-darwin-arm64"
-      sha256 "fb3e4c9260d9fd939f7f8c87e6f0d76c94e52b7dddc573a9bfbb5cc2d4cc04f9"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.4.0/structured-darwin-arm64"
+      sha256 "392387d9c9bd1faf4cd99a34ab8b0dd6dc7ba673024d16294f008482c7a8da78"
     end
     on_intel do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.3.0/structured-darwin-x64"
-      sha256 "4b26f374bba0f2af96bd3532a519a03836f28d3b10100a7a42b42c404ab607a7"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.4.0/structured-darwin-x64"
+      sha256 "9f03f1f9b64d17aaae1f1dbab491dee3d9430b70697b3e9d960c0cb0cd000521"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.3.0/structured-linux-arm64"
-      sha256 "a06330c66d4ae307af12c612284a346ac05591dd1a582f41b03903eeb58aefc9"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.4.0/structured-linux-arm64"
+      sha256 "b58e50b3a623ae18dd4c83c9413e9b21ef1631e5d6b746fd778ef2b0d9eacbf8"
     end
     on_intel do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.3.0/structured-linux-x64"
-      sha256 "934f94d4b8f77b0dbdc7e53fd334dbed555e4ede75cd3fc3620f95a92b26f119"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.4.0/structured-linux-x64"
+      sha256 "787e6e3399e465937fe7bbdc2b5532c1d9f8ab68193c20206bdce77e3acc2db2"
     end
   end
 
