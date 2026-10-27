@@ -13,14 +13,9 @@ class Structured < Formula
   # Prebuilt binaries are published to this tap's own releases, so installing
   # does not require access to the private structured-cli source repository.
   on_macos do
-    on_arm do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.4.0/structured-darwin-arm64"
-      sha256 "392387d9c9bd1faf4cd99a34ab8b0dd6dc7ba673024d16294f008482c7a8da78"
-    end
-    on_intel do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.4.0/structured-darwin-x64"
-      sha256 "9f03f1f9b64d17aaae1f1dbab491dee3d9430b70697b3e9d960c0cb0cd000521"
-    end
+    depends_on arch: :arm64
+    url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.4.0/structured-darwin-arm64"
+    sha256 "392387d9c9bd1faf4cd99a34ab8b0dd6dc7ba673024d16294f008482c7a8da78"
   end
 
   on_linux do
