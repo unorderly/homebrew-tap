@@ -26,7 +26,8 @@ access to it in order to install:
 - `brew install --HEAD structured` builds from `main` with Go over SSH. This requires access
   to `unorderly/structured-cli`.
 
-Binaries are built for macOS (arm64, x86-64) and Linux (arm64, x86-64).
+macOS requires Apple Silicon (arm64). Linux supports arm64 and x86-64.
+The same architecture requirements apply when building with `--HEAD`.
 
 ## Releasing a new version
 
