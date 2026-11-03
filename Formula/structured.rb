@@ -13,6 +13,7 @@ class Structured < Formula
   # Prebuilt binaries are published to this tap's own releases, so installing
   # does not require access to the private structured-cli source repository.
   on_macos do
+    depends_on macos: :sonoma
     depends_on arch: :arm64
     url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.5.1/structured-darwin-arm64"
     sha256 "7d80930fc99cfb3ec05d125672e4d720527f5e2c9be28f06ce758700ae6cf7ce"
