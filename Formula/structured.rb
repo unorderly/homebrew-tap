@@ -1,7 +1,7 @@
 class Structured < Formula
   desc "CLI for Structured, the daily planner"
   homepage "https://structured.app"
-  version "0.5.0"
+  version "0.5.1"
   license :cannot_represent
 
   # Building from source needs SSH access to the private repository.
@@ -14,18 +14,18 @@ class Structured < Formula
   # does not require access to the private structured-cli source repository.
   on_macos do
     depends_on arch: :arm64
-    url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.5.0/structured-darwin-arm64"
-    sha256 "2787c56f0e73d58523e7e74b2a6611ab7569ad0a202576a6bd3153371486a6e5"
+    url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.5.1/structured-darwin-arm64"
+    sha256 "7d80930fc99cfb3ec05d125672e4d720527f5e2c9be28f06ce758700ae6cf7ce"
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.5.0/structured-linux-arm64"
-      sha256 "b3542e93db125a700f78ef199cdab2ac9c9bc9c4f7b5b4d3cb5344bfbdba4b6e"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.5.1/structured-linux-arm64"
+      sha256 "508a889526894b7dbcaaefdb63bee4c586b9d069eb2e0e89bc2c69099a647ee0"
     end
     on_intel do
-      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.5.0/structured-linux-x64"
-      sha256 "aa4a75a3813947cef54c7d6c41851a1c0a72ee6669f19e58fe3e099ed66b9fb3"
+      url "https://github.com/unorderly/homebrew-tap/releases/download/structured-v0.5.1/structured-linux-x64"
+      sha256 "13a852fea5301b1056d0a4805be281ec56d0734eaf81581c7cf2bb9444f9e10f"
     end
   end
 
